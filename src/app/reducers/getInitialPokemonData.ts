@@ -8,7 +8,6 @@ export const getInitialPokemonData = createAsyncThunk(
   async () => {
     try {
       const { data } = await axios.get(pokemonsRoute);
-      console.log({data});
       return data.results;
     } catch (err) {
       console.error(err);
